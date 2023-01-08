@@ -1,8 +1,8 @@
 <template>
-  <form @submit.prevent="bestStudents">
+  <form @submit.prevent="photographerPage">
     <section>
-        <div class="level-face">
-   <h1>Best Students From the Level 1 to 5</h1>
+       <div class="level-face">
+   <h1> photographer of the year</h1>
     </div>
     <div class="level-name">
     <input type="text" v-model="name" placeholder="Name">
@@ -25,8 +25,8 @@ data() {
   }
 },
 methods: {
-  bestStudents () {
-    let bestStudent = {
+  photographerPage () {
+    let photographerPage = {
       name: this.name,
       nickName: this.nickName,
       level: this.level
@@ -34,7 +34,7 @@ methods: {
      this.name = "",
     this.nickName = "",
     this.level = ""
-    projectFireStore.collection("bestStudent").add(bestStudent)
+    projectFireStore.collection("photographerPage").add(photographerPage)
   }
 }
 }

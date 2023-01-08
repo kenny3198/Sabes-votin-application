@@ -1,8 +1,8 @@
 <template>
-  <form @submit.prevent="Wardrobe">
+  <form @submit.prevent="Yearstudents">
     <section>
         <div class="level-face">
-   <h1>Exquisite Male / Female Wardrobe</h1>
+   <h1>Students Of the year</h1>
     </div>
     <div class="level-name">
     <input type="text" v-model="name" placeholder="Name">
@@ -26,8 +26,8 @@ export default {
     }
   },
   methods: {
-    Wardrobe() {
-  let wardrobe = {
+    Yearstudents() {
+  let yearStudents = {
     name: this.name,
     nickName: this.nickName,
     level: this.level
@@ -35,7 +35,7 @@ export default {
    this.name = "",
     this.nickName = "",
     this.level = ""
-  projectFireStore.collection("wardrobe").add(wardrobe)
+  projectFireStore.collection("yearStudents").add(yearStudents)
 }
   }
 

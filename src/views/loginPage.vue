@@ -5,6 +5,7 @@
     <div class="login-group">
       <input class="login-input" type="text" v-model="name" placeholder="Enter your Matric Number" required>
         </div>
+        
         <div class="password-group">
             <!-- <input type="text" v-model="password" placeholder="Enter your pssword" required> -->
         </div>

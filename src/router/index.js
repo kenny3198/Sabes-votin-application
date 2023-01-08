@@ -7,7 +7,6 @@ import facePage from "@/components/facePage"
 import MrEbonyPage from "@/components/MrEbonyPage"
 import fresherProspect from '@/components/fresherProspect'
 import MostRecognized from "@/components/MostRecognized"
-import BestStudentsPage from "@/components/BestStudentsPage"
 import ExecutivePage from "@/components/ExecutivePage"
 import EntreprenurePage from "@/components/EntreprenurePage"
 import MostPoliticalPage from "@/components/MostPoliticalPage"
@@ -16,9 +15,17 @@ import CoupleYearPage from "@/components/CoupleYearPage"
 import MostEndowedPage from "@/components/MostEndowedPage" 
 import SlimShaddyPage from "@/components/SlimShaddyPage" 
 import SportManPage from '@/components/SportManPage'
-import BestCliquePage from "@/components/BestStudentsPage"
+import BestCliquePage from "@/components/BestCliquePage"
 import CalmCollected from "@/components/CalmCollected"
 import BestClassRep from "@/components/BestClassRep"
+import StudentOfYear from "@/components/StudentOfYear"
+import SocialMedia from "@/components/SocialMedia"
+import GraphicDesigner from "@/components/GraphicDesigner"
+import ContentsCreator from "@/components/ContentsCreator"
+import MostExpensive from "@/components/MostExpensive"
+import MostSocial from "@/components/MostSocial"
+import photographerPage from "@/components/photographerPage"
+import JagabanPage from "@/components/JagabanPage"
 const routes = [
   {
     path: '/',
@@ -26,9 +33,50 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/GraphicDesigner',
+    name: 'GraphicDesigner',
+    component: GraphicDesigner
+  },
+  {
+    path: '/JagabanPage',
+    name: 'JagabanPage',
+    component: JagabanPage
+  },
+  {
+    path: '/photographerPage',
+    name: 'photographerPage',
+    component: photographerPage
+  },
+  {
+    path: '/MostSocial',
+    name: 'MostSocial',
+    component: MostSocial
+  },
+
+  {
+    path: '/MostExpensive',
+    name: 'MostExpensive',
+    component: MostExpensive
+  },
+  {
+    path: '/ContentsCreator',
+    name: 'ContentsCreator',
+    component: ContentsCreator
+  },
+  {
     path: '/lastPage',
     name: 'lastPage',
     component: lastPage
+  },
+  {
+    path: '/SocialMedia',
+    name: 'SocialMedia',
+    component: SocialMedia
+  },
+  {
+    path: '/StudentOfYear',
+    name: 'StudentOfYear',
+    component: StudentOfYear
   },
   {
     path: '/categoryPage',
@@ -60,11 +108,7 @@ const routes = [
     name: 'MostRecognized',
     component: MostRecognized
   },
-  {
-    path: '/BestStudentsPage',
-    name: 'BestStudentsPage',
-    component: BestStudentsPage
-  },
+  
   {
     path: '/ExecutivePage',
     name: 'ExecutivePage',

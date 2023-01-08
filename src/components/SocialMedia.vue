@@ -1,8 +1,8 @@
 <template>
-  <form @submit.prevent="Best">
+  <form @submit.prevent="SocialMedia">
      <section>
         <div class="level-face">
-   <h1>Best Class Rep of the year</h1>
+   <h1>SOcial media influencial</h1>
     </div>
     <div class="level-name">
        <input type="text" v-model="name" placeholder="Name" required>
@@ -26,8 +26,8 @@ data() {
   }
 },
 methods: {
-  Best () {
-    let best = {
+  SocialMedia () {
+    let socialMedia = {
       name: this.name,
       nickName: this.nickName,
       level: this.level
@@ -35,7 +35,7 @@ methods: {
      this.name = "",
     this.nickName = "",
     this.level = ""
-    projectFireStore.collection("best").add(best)
+    projectFireStore.collection("socialMedia").add(socialMedia)
   }
 }
 }
