@@ -5,9 +5,9 @@
    <h1>Most social</h1>
     </div>
     <div class="level-name">
-    <input type="text" v-model="name" placeholder="Name">
-        <input type="text" v-model="nickName" placeholder="Nick-Name">
-        <input type="text" v-model="level" placeholder="Level">
+    <input type="text" v-model="name" placeholder="Name" required>
+        <input type="text" v-model="nickName" placeholder="Nick-Name" required>
+        <input type="text" v-model="level" placeholder="Level" required>
         <button class="btn-submit">submit</button>
     </div>
   </section>
