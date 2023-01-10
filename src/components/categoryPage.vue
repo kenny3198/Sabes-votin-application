@@ -1,5 +1,6 @@
 <template>
 <h1 class="welcome">Welcome!!</h1>
+   <p>Nominators are tracked with ID, Nominating a candidate Twice call for Disqualification</p>
  <div class="category">
     <facePage/>
     <student-of-year/>
