@@ -27,12 +27,12 @@ export default {
     methods: {
    async handleSubmit() {
     try {
-    if(this.name.includes("EA") && this.name.length > 13 ) {
+    if(this.name.includes("NOTACESS") && this.name.length > 13 ) {
         return this.$router.push({name: "categoryPage"})
     }
 
     else{
-    console.log("congrats")
+    alert("Nomination is over")
     }
 
     } catch (error) {
