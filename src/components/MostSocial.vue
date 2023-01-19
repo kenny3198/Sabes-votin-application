@@ -1,44 +1,57 @@
 <template>
-  <form @submit.prevent="MostSocial">
     <section>
-        <div class="level-face">
-   <h1>Most social</h1>
+    <div class="level-face">
+   <h1> MOST EXPENSIVE </h1>
     </div>
-    <div class="level-name">
-    <input type="text" v-model="name" placeholder="Name" required>
-        <input type="text" v-model="nickName" placeholder="Nick-Name" required>
-        <input type="text" v-model="level" placeholder="Level" required>
-        <button class="btn-submit">submit</button>
+     <h2 class="repeated">REPEATED VOTES DECREASE THE USERS VOTE BY -1</h2>
+  <div class="container">
+    <div class="first-input">
+      <input v-model="output" type="radio" value="YVK (400L)" name="gender" id="Mr A">
+     <label for="Mr A">YVK (400L)</label>
     </div>
-  </section>
+     <br>
+    <div class="first-input">
+   <input v-model="output" type="radio" value="SOCIAL BUTTERFLY (300L)" name="gender" id="MR B">
+   <label for="MR B">SOCIAL BUTTERFLY (300l)</label>
+   </div>
+    <br>
+   <div class="first-input">
+    <input v-model="output" type="radio" value="YOUNG MONEY (400L)" name="gender" id="MR C">
+    <label for="MR C">YOUNG MONEY (400L)</label>
+    </div>
+  <br>
+  
+  </div>
+  <div class="btn-container">
+     <button @click="voteSocial" class="btn">Vote</button>
+    <button class="btn">Results</button>
+  </div>
 
-  </form>
+   
+    </section>
 </template>
 
 <script>
-import { projectFireStore } from "@/firebase/config"
+import { votingFireStore } from "@/firebase/config"
 export default {
-  data() {
-    return {
-      name: "",
-      nickName: "",
-      level: ""
-    }
-  },
-  methods: {
-    MostSocial() {
-  let mostSocial = {
-    name: this.name,
-    nickName: this.nickName,
-    level: this.level
+data() {
+  return {
+   output: null
   }
-   this.name = "",
-    this.nickName = "",
-    this.level = ""
-  projectFireStore.collection("mostSocial").add(mostSocial)
+},
+methods: {
+ voteSocial() {
+if (this.output === "") {
+  alert("choose a candidtae")
+} else {
+    let socialVote = {
+    output : this.output
+  }
+  this.output = ""
+  votingFireStore.collection("socialVote").add(socialVote)
 }
-  }
-
+}
+}
 }
 </script>
 

@@ -1,43 +1,35 @@
 <template>
-  <div class="home">
-   <marquee behavior="scroll" direction="left"> <h1>SABES NOMINATION PORTAL</h1></marquee>
-    <p>PICK YOUR NOMINESS AND LET US KNOW </p>
-    <router-link :to="{name: 'loginPage'}">CLICK HERE TO LOGING</router-link>
-
-  </div>
+<div class="homePage"> 
+  <MARquee>
+    <h1>SOCIETY OF AGRICULTURE AND BIORESOURCES ENGINEERING DEPARTMENT</h1>
+   </MARquee>
+   <div class="login-page">
+     <router-link class="login" :to="{name: 'loginPage'}">LOGIN IN</router-link>
+   </div>
+</div>
+  
 </template>
 
 <script>
-// @ is an alias to /src
-
 export default {
-  name: 'HomeView',
-  components: {
-  
-  }
+
 }
 </script>
-<style scoped>
-  .home{
-    background-image: url("../assets/enginerring.jpg");
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-  h1 {
-    color:green;
-  }
-  p{
-    color: #fff;
-    font-size: 2rem;
-  }
-  a {
-    font-size: 2rem;
-    color: #fff;
+
+<style lang="scss" scoped>
+.homePage {
+  background: black;
+  height: 100vh;
+}
+h1{
+    color: gold;
+}
+.login-page{
+  display: flex;
+  justify-content: center;
+}
+.login {
+    color: white;
+    text-decoration: none;
   }
 </style>

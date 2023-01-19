@@ -1,44 +1,69 @@
 <template>
-  <form @submit.prevent="Yearstudents">
     <section>
-        <div class="level-face">
-   <h1>Students Of the year</h1>
+    <div class="level-face">
+   <h1>STUDENT OF THE YEAR </h1>
     </div>
-    <div class="level-name">
-    <input type="text" v-model="name" placeholder="Name" required>
-        <input type="text" v-model="nickName" placeholder="Nick-Name" required>
-        <input type="text" v-model="level" placeholder="Level" required>
-        <button class="btn-submit">submit</button>
+     <h2 class="repeated">REPEATED VOTES DECREASE THE USERS VOTE BY -1</h2>
+  <div class="container">
+    <div class="first-input">
+      <input v-model="output" type="radio" value="JUDE (500L)" name="gender" id="Mr A">
+     <label for="Mr A">JUDE (500L)</label>
     </div>
-  </section>
+     <br>
+    <div class="first-input">
+   <input v-model="output" type="radio" value="BOSSMAN (500L)" name="gender" id="MR B">
+   <label for="MR B"> BOSSMAN (500L)</label>
+   </div>
+    <br>
+   <div class="first-input">
+    <input v-model="output" type="radio" value="BERRY (500L)" name="gender" id="MR C">
+    <label for="MR C">BERRY (500L)</label>
+    </div>
+  <br>
+  <div class="first-input">
+     <input v-model="output" type="radio" value="PROF (500L)" name="gender" id="MR D">
+     <label for="MR D">PROFF (500L)</label>
+     </div>
+     <br>
+     <div class="first-input">
+      <input v-model="output" type="radio" value="TIJANI (500L)" name="gender" id="MR E">
+      <label for="MR E">TIJANI (500L)</label>
+      </div>
+       <!-- <p> hidden results {{ output }}</p> -->
+  </div>
+  <div class="btn-container">
+     <button @click="voteStudentOfTheYear" class="btn">Vote</button>
+    <button @click="results" class="btn">Results</button>
+  </div>
 
-  </form>
+   
+    </section>
 </template>
 
 <script>
-import { projectFireStore } from "@/firebase/config"
+import { votingFireStore } from "@/firebase/config"
 export default {
-  data() {
-    return {
-      name: "",
-      nickName: "",
-      level: ""
-    }
-  },
-  methods: {
-    Yearstudents() {
-  let yearStudents = {
-    name: this.name,
-    nickName: this.nickName,
-    level: this.level
+data() {
+  return {
+   output: null
   }
-   this.name = "",
-    this.nickName = "",
-    this.level = ""
-  projectFireStore.collection("yearStudents").add(yearStudents)
+},
+methods: {
+ voteStudentOfTheYear() {
+if (this.output === "") {
+  alert("choose a candidate")
+} else {
+    let studentOfYearVote = {
+    output : this.output
+  }
+  this.output = ""
+  votingFireStore.collection("studentOfYearVote").add(studentOfYearVote)
 }
-  }
-
+},
+results() {
+  alert("this page is meant for admin")
+}
+}
 }
 </script>
 

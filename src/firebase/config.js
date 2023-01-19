@@ -1,20 +1,21 @@
  import firebase from "firebase/compat/app"
  import "firebase/compat/firestore"
 
-const firebaseConfig = {
-    apiKey: "AIzaSyCcL9zpkz3iBhoGgbLZUpMZ3YMGNtkuIhU",
-    authDomain: "sabes-nominees.firebaseapp.com",
-    projectId: "sabes-nominees",
-     storageBucket: "sabes-nominees.appspot.com",
-     messagingSenderId: "376328214090",
-     appId: "1:376328214090:web:cf028bd0f8a3bcf21438b3"
-   };
+ const firebaseConfig = {
+  apiKey: "AIzaSyAiLntF1yJZCgq0iK_krdY-7XJ1xgaJ3z0",
+  authDomain: "sabes-votin-app.firebaseapp.com",
+  projectId: "sabes-votin-app",
+  storageBucket: "sabes-votin-app.appspot.com",
+  messagingSenderId: "681190452275",
+  appId: "1:681190452275:web:a2edfdc1f2329c2da70746"
+};
 
-  firebase.initializeApp(firebaseConfig)
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
-   const projectFireStore =  firebase.firestore();
+   const votingFireStore =  firebase.firestore();
 
-  export  { projectFireStore } 
+  export  { votingFireStore } 
 
 
 

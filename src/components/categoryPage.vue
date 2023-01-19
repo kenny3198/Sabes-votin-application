@@ -1,132 +1,103 @@
 <template>
-<h1 class="welcome">Welcome!!</h1>
-   <p>Nominators are tracked with ID, Nominating a candidate Twice call for Disqualification</p>
- <div class="category">
-    <facePage/>
-    <student-of-year/>
-    <MrEbonyPage/>
-    <fresherProspect/>
-    <MostRecognized/>
-    <photographerPage/>
-    <ExecutivePage/>
-    <most-political-page/>
-    <entreprenure-Page/>
-    <most-influencial-page/>
-    <couple-year-page/>
-    <most-endowed-page/>
-    <slim-shaddy-page/>
-    <sport-man-page/>
-    <best-clique-page/>
-    <calm-collected/>
-    <BestClassRep/>
-    <SocialMedia/>
-    <GraphicDesigner/>
-    <ContentsCreator/>
-    <MostExpensive/>
-    <jagaban-page/>
-    <most-social/>
- </div>
- <div class="router-div">
- <router-link :to="{name: 'lastPage'}" class="end">END</router-link>
- </div>
-  </template>
+<div class="container-button"> 
+<button @click="ebony">MR EBONY</button>
+<button @click="student">STUDENT OF THE YEAR</button>
+ <button @click="jagaban">JAGABAN OF ABE</button>
+  <button @click="graphicDesigner">GRAPHICDESIGNER OF THE YEAR</button>
+  <button @click="influencial">MOST INFLUENCIAL</button>
+  <button @click="social">MOST SOCIAL</button>
+   <button @click="enterprenure">ENTERPRENURE OF THE YEAR </button>
+   <button @click="endowed">MISS ENDOWED </button>
+    <button @click="wardrobe">MALE EXECUSITE WARDROBE </button>
+    <button @click="photographer">PHOTOGRAPHER OF THE YEAR </button>
+     <button @click="slimShaddy">SLIM SHADY </button>
+      <button @click="mostPolitical">MOST POLITCAL </button>
+      <button @click="coupleOfYear">COUPLE OF THE YEAR </button>
+       <button @click="excoOfTheYear">EXCO OF THE YEAR </button>
+       <button @click="calmCollected">COOL CALM AND COLLECTED</button>
+       <button @click="femaleWardrobe">FEMALE EXECUSITE WARDROBE</button>
+              <button @click="bestClique">BEST CLIQUE</button>
+              <button @click="sportMan">SPORT MAN OF THE YEAR</button>
+
+</div>
+    
+</template>
 <script>
-import facePage from "@/components/facePage"
-import MrEbonyPage from '@/components/MrEbonyPage.vue'
-import fresherProspect from '@/components/fresherProspect'
-import MostRecognized from "@/components/MostRecognized"
-import photographerPage from "@/components/photographerPage"
-import ExecutivePage from "@/components/ExecutivePage"
-import EntreprenurePage from "@/components/EntreprenurePage"
-import MostPoliticalPage from "@/components/MostPoliticalPage"
-import MostInfluencialPage from "@/components/MostInfluencialPage"
-import CoupleYearPage from "@/components/CoupleYearPage"
-import MostEndowedPage from "@/components/MostEndowedPage" 
-import SlimShaddyPage from "@/components/SlimShaddyPage"
-import SportManPage from '@/components/SportManPage'
-import BestCliquePage from "@/components/BestCliquePage"
-import CalmCollected from "@/components/CalmCollected"
-import BestClassRep from "@/components/BestClassRep"
-import StudentOfYear from "@/components/StudentOfYear"
-import SocialMedia from "@/components/SocialMedia"
-import GraphicDesigner from "@/components/GraphicDesigner"
-import ContentsCreator from "@/components/ContentsCreator"
-import MostExpensive from "@/components/MostExpensive"
-import MostSocial from "@/components/MostSocial"
-import JagabanPage from "@/components/JagabanPage"
 export default {
-components: { 
-facePage,
- MrEbonyPage,
-  fresherProspect,
-   MostRecognized,
-    photographerPage,
-    ExecutivePage,
-    EntreprenurePage,
-    MostPoliticalPage,
-    MostInfluencialPage,
-    CoupleYearPage,
-    MostEndowedPage,
-    SlimShaddyPage,
-    SportManPage,
-    BestCliquePage,
-    CalmCollected,
-    BestClassRep,
-    StudentOfYear,
-    SocialMedia,
-    GraphicDesigner,
-    ContentsCreator,
-    MostExpensive,
-    MostSocial,
-    JagabanPage
-     }
+    methods: {
+   ebony() {
+   this.$router.push({name: "MrEbonyPage"})
+        },
+  student() {
+    this.$router.push({ name: "StudentOfYear"})
+  },
+  graphicDesigner() {
+    this.$router.push({name: "graphicDesigner"})
+  },
+  jagaban() {
+    this.$router.push({ name: "jagabanOfAbe"})
+  },
+  influencial() {
+    this.$router.push({ name: "mostInfluencial"})
+  },
+  social() {
+    this.$router.push({name: "mostSocial"})
+  },
+  enterprenure() {
+    this.$router.push({ name: "enterprenureOfTheYear"})
+  },
+  endowed() {
+    this.$router.push({ name: "missEndowed"})
+  },
+  wardrobe() {
+    this.$router.push({ name: "maleWardrobe"})
+  },
+ photographer() {
+  this.$router.push({ name: "photographerPage"})
+ },
+  slimShaddy() {
+  this.$router.push({ name: "slimShaddy"})
+ },
+   mostPolitical() {
+  this.$router.push({ name: "mostPolitical"})
+ },
+ coupleOfYear() {
+  this.$router.push({ name: "coupleOfYear"})
+ },
+ excoOfTheYear() {
+  this.$router.push({ name: "excoOfTheYear"})
+ },
+ calmCollected() {
+  this.$router.push({ name: "calmCollected"})
+ },
+ femaleWardrobe() {
+  this.$router.push({ name : "femaleWardrobe"})
+ },
+ bestClique() {
+  this.$router.push({ name: "bestClique"})
+ },
+ sportMan() {
+  this.$router.push({ name: "sportMan"})
+ }
+    }
 }
 </script>
-
-<style lang="scss">
-    .welcome {
-   padding: 20px;
-   margin-top: 0;
-    }
-.level-face h1{
-    background: blue;
-    text-transform: uppercase;
-    border-radius: 10px;
-    margin: auto;
-    width: 50%;
-    padding: 8px;
-    font-size: 1rem;
-    color: white;
-}
-.level-name input {
+<style scoped>
+  .container-button {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin:10px auto;
-    padding: 10px;
+    gap: 10px;
+  }
+  button{
+    padding: 20px 120px;
+    background: black;
+    color: white;
+    border: 2px solid gold;
     border-radius: 10px;
-    border: none;
-    border-bottom: 2px solid grey;
-}
-.btn-submit{
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
+    font-size: 1.3rem;
     cursor: pointer;
-    background: blue;
-    color: white;
-    border: none;
-    text-transform: capitalize;
-}
-.end{
-    padding: 0.75rem;
-    color: white;
-    background: blue;
-    border-radius: 10px;
-    text-decoration: none;
-}
-.router-div{
-    margin-top: 20px;
-}
+  }
+  
 </style>

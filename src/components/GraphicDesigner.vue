@@ -1,44 +1,69 @@
 <template>
-  <form @submit.prevent="GraphicDesigner">
     <section>
-        <div class="level-face">
-   <h1>GraphicDesigner Of the year</h1>
+    <div class="level-face">
+   <h1>GRAPHICDESIGNER OF THE YEAR </h1>
     </div>
-    <div class="level-name">
-    <input type="text" v-model="name" placeholder="Name" required>
-        <input type="text" v-model="nickName" placeholder="Nick-Name" required>
-        <input type="text" v-model="level" placeholder="Level" required>
-        <button class="btn-submit">submit</button>
+      <h2 class="repeated">REPEATED VOTES DECREASE THE USERS VOTE BY -1</h2>
+  <div class="container">
+    <div class="first-input">
+      <input v-model="output" type="radio" value="CLASSIC (100L)" name="gender" id="Mr A">
+     <label for="Mr A">CLASSIC (100L)</label>
     </div>
-  </section>
+     <br>
+    <div class="first-input">
+   <input v-model="output" type="radio" value="PRINCE UMAR (200L)" name="gender" id="MR B">
+   <label for="MR B">PRINCE UMAR (200L)</label>
+   </div>
+    <br>
+   <div class="first-input">
+    <input v-model="output" type="radio" value="JEFF (300L)" name="gender" id="MR C">
+    <label for="MR C">JEFF (300L)</label>
+    </div>
+  <br>
+  <div class="first-input">
+     <input v-model="output" type="radio" value="WALE (500L)" name="gender" id="MR D">
+     <label for="MR D">WALE (500l)</label>
+     </div>
+     <br>
+     <div class="first-input">
+      <input v-model="output" type="radio" value="YEBO (500L)" name="gender" id="MR E">
+      <label for="MR E">YEBO (500L)</label>
+      </div>
+       <!-- <p> hidden results {{ output }}</p> -->
+  </div>
+  <div class="btn-container">
+     <button @click="voteGraphic" class="btn">Vote</button>
+    <button @click="results" class="btn">Results</button>
+  </div>
 
-  </form>
+   
+    </section>
 </template>
 
 <script>
-import { projectFireStore } from "@/firebase/config"
+import { votingFireStore } from "@/firebase/config"
 export default {
-  data() {
-    return {
-      name: "",
-      nickName: "",
-      level: ""
-    }
-  },
-  methods: {
-    GraphicDesigner() {
-  let graphicDesigner = {
-    name: this.name,
-    nickName: this.nickName,
-    level: this.level
+data() {
+  return {
+   output: null
   }
-   this.name = "",
-    this.nickName = "",
-    this.level = ""
-  projectFireStore.collection("graphicDesigner").add(graphicDesigner)
+},
+methods: {
+voteGraphic() {
+if (this.output === "") {
+  alert("choose a candidate")
+} else {
+    let graphicVote = {
+    output : this.output
+  }
+  this.output = ""
+  votingFireStore.collection("graphicVote").add(graphicVote)
 }
-  }
-
+},
+results() {
+  alert("this page is meant for the admin")
+}
+}
 }
 </script>
 
