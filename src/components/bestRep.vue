@@ -47,6 +47,7 @@ export default {
 data() {
   return {
    output: null
+//    name: ""
   }
 },
 methods: {
