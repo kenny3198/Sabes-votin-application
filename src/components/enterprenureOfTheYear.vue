@@ -9,6 +9,11 @@
       <input v-model="output" type="radio" value="BLAZE EXCHANGE (500L)" name="gender" id="Mr A">
      <label for="Mr A">BLAZE EXCHANGE (500L)</label>
     </div>
+<br>   
+     <!-- <div class="first-input">
+      <input v-model="output" type="radio" value= "BOLAR (500L)" name="gender" id="Mr A">
+     <label for="Mr A">BOLAR (500L)</label>
+    </div> -->
      <br>
     <div class="first-input">
    <input v-model="output" type="radio" value="ALUTA GARRI (300L)" name="gender" id="MR B">
@@ -44,7 +49,7 @@ import { votingFireStore } from "@/firebase/config"
 export default {
 data() {
   return {
-   output: null
+   output: null,
   }
 },
 methods: {
@@ -62,7 +67,7 @@ methods: {
 results() {
   alert("This page is meant for the admin")
 }
-}
+},
 }
 </script>
 

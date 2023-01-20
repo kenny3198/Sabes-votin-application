@@ -20,12 +20,42 @@ import femaleWardrobe from "@/components/femaleWardrobe"
 import calmCollected from "@/components/calmCollected"
 import bestClique from "@/components/bestClique"
 import sportMan from "@/components/sportMan"
+import levelOne from "@/components/levelOne"
+import levelTwo from "@/components/levelTwo"
+import levelThree from "@/components/levelThree"
+import levelFour from "@/components/levelFour"
+import levelFive from "@/components/levelFive"
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: HomeView
+  },
+  {
+    path: '/levelOne',
+    name: 'levelOne',
+    component: levelOne
+  },
+  {
+    path: '/levelFive',
+    name: 'levelFive',
+    component: levelFive
+  },
+  {
+    path: '/levelFour',
+    name: 'levelFour',
+    component: levelFour
+  },
+  {
+    path: '/levelThree',
+    name: 'levelThree',
+    component: levelThree
+  },
+  {
+    path: '/levelTwo',
+    name: 'levelTwo',
+    component: levelTwo
   },
   {
     path: '/femaleWardrobe',

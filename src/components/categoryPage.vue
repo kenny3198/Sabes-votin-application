@@ -1,5 +1,10 @@
 <template>
 <div class="container-button"> 
+  <button @click="LevelOneFace">FACE OF 100L</button>
+  <button @click="LevelTwoFace">FACE OF 200L</button>
+ <button @click="LevelThreeFace">FACE OF 300L</button>
+ <button @click="LevelFourFace">FACE OF 400L</button>
+ <button @click="LevelFiveFace">FACE OF 500L</button>
 <button @click="ebony">MR EBONY</button>
 <button @click="student">STUDENT OF THE YEAR</button>
  <button @click="jagaban">JAGABAN OF ABE</button>
@@ -25,6 +30,21 @@
 <script>
 export default {
     methods: {
+   LevelOneFace() {
+    this.$router.push({name: "levelOne"})
+   },
+   LevelTwoFace () {
+    this.$router.push({name :"levelTwo"})
+   },
+   LevelThreeFace() {
+    this.$router.push({ name: "levelThree"})
+   },
+   LevelFourFace() {
+    this.$router.push({name: "levelFour"})
+   },
+   LevelFiveFace(){
+    this.$router.push({ name: "levelFive"})
+   },
    ebony() {
    this.$router.push({name: "MrEbonyPage"})
         },
