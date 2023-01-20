@@ -23,6 +23,7 @@
        <button @click="femaleWardrobe">FEMALE EXECUSITE WARDROBE</button>
               <button @click="bestClique">BEST CLIQUE</button>
               <button @click="sportMan">SPORT MAN OF THE YEAR</button>
+              <button @click="BestRep">BEST CLASS REP OF THE YEAR</button>
 
 </div>
     
@@ -30,6 +31,9 @@
 <script>
 export default {
     methods: {
+      BestRep() {
+        this.$router.push({name : "bestRep"})
+      },
    LevelOneFace() {
     this.$router.push({name: "levelOne"})
    },

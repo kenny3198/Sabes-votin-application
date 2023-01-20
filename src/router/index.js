@@ -25,6 +25,7 @@ import levelTwo from "@/components/levelTwo"
 import levelThree from "@/components/levelThree"
 import levelFour from "@/components/levelFour"
 import levelFive from "@/components/levelFive"
+import bestRep from "@/components/bestRep"
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     path: '/levelOne',
     name: 'levelOne',
     component: levelOne
+  },
+  {
+    path: '/bestRep',
+    name: 'bestRep',
+    component: bestRep
   },
   {
     path: '/levelFive',
