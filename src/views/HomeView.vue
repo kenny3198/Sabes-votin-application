@@ -1,7 +1,7 @@
 <template>
 <div class="homePage"> 
   <MARquee>
-    <h1>SOCIETY OF AGRICULTURE AND BIORESOURCES ENGINEERING DEPARTMENT</h1>
+    <h1>SOCIETY OF AGRICULTURE AND BIORESOURCES ENGINEERING DEPARTMENT.</h1>
    </MARquee>
    <div class="login-page">
      <router-link class="login" :to="{name: 'loginPage'}">LOGIN IN</router-link>
